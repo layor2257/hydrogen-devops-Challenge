@@ -258,4 +258,21 @@ spec:
  Once you have your Deployment manifest ready, you can push it to your GitHub repository. Make sure to replace placeholders like your-app, 
  your-app-image, and update the labels as needed.
 
+ A service manifest to allow the app to be acccessible outside the k8s cluster:
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: your-app-service
+spec:
+  selector:
+    app: your-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
+```
+
  Using `kubectl` configured to connect to your Kubernetes cluster: `kubectl apply -f your-app-deployment.yaml`
