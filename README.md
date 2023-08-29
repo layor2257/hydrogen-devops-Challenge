@@ -274,3 +274,38 @@ spec:
 ```
 
  Using `kubectl` configured to connect to my Kubernetes cluster to deploy the app: `kubectl apply -f your-app-deployment.yaml`
+
+3. Check the disk usage: I will run the following command to see how much disk space is being used:
+
+    `df -h`
+
+    This will show you the disk usage for all partitions on the Ubuntu server.
+
+    Identify the largest files and folders: Once I know which partitions are full, I will use the du command to identify the largest 
+    files and folders in those partitions.
+
+    `du -sh *`
+
+    This will list all of the files in the root directory, along with their sizes.
+
+    Remove unnecessary files and folders: Once I have identified the files and folders that you no longer need, I will remove them 
+    using the `rm` command. For example, to remove the file `myfile.txt`, you would run the following command:
+
+    `rm myfile.txt`
+
+    And to remove a directory `rmdir`, for example:
+
+    `rmdir mydir`
+
+    Clean up the APT cache: The APT cache is a collection of files that are downloaded by the APT package manager. These files are used to 
+    install and update packages. However, they can take up a lot of space if they are not cleaned regularly. To clean up the APT cache, 
+    I would run the following command:
+
+    `sudo apt-get clean`
+
+     Remove old kernels: Finally, I would remove old kernels that are no longer needed using this command:
+
+     `sudo apt-get autoremove`
+     
+
+
