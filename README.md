@@ -31,17 +31,18 @@ app.listen(port, () => {
 
 1. Firstly, I would like to define what a reverse proxy is.
 
-A reverse proxy is a server that sits between a client device and a backend server and directs client requests to the appropriate server.
+   A reverse proxy is a server that sits between a client device and a backend server and directs client requests to the appropriate server.
 
- Nginx is a reverse proxy server that handles requests on behalf of the backend server instead of clients connecting directly to the backend server and then forwards the requests to the appropriate backend server and returns the response back to the clients.
+   Nginx is a reverse proxy server that handles requests on behalf of the backend server instead of clients connecting directly to the backend server and then forwards the requests to 
+   the appropriate backend server and returns the response back to the clients.
 
-These are the steps to set up an Nginx reverse proxy server:
+   These are the steps to set up an Nginx reverse proxy server:
 
-Using the `apt` packaging system, we need to first update or local package index
+   Using the `apt` packaging system, we need to first update or local package index
 
-```
-sudo apt update
-sudo apt install nginx
-```
+  ```
+  sudo apt update
+  sudo apt install nginx
+  ```
 
 
