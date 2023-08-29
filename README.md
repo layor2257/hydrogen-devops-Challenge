@@ -186,7 +186,7 @@ server {
 
 
 
- 2. #### The second task
+ 2. ### The second task
 
     This question asks me to explain how you would deploy an application that requires 2.5 GB of memory to a Kubernetes cluster that has two node pools, each with specific 
     computing resources. Additionally, the First Node pool has 1GB of Memory and 1 CPU and the Second Node pool has 3GB of Memory and 2 CPUs.
