@@ -172,4 +172,13 @@ server {
 
 #### The above proxy configuration was done using nginx in the `/etc/nginx/sites-available` directory with a symlink set up with the `sites-enabled`. The base URL for the server is `glorypay.com` and it contains two backend servers with endpoints called `gloryback.glorypay.com` and `gloryfront.glorypay.com` both opened on port `8300` and `8006` respectively. The client-side HTTPS request is managed using `Certbot`
 
+#### Reason for Nginx reverse proxy:
+
+  **Load Balancing**: Reverse proxies often distribute incoming client requests across multiple backend servers. This helps balance the load and ensures that no single server is 
+    overwhelmed by traffic.
+  **Caching**: Reverse proxies can cache static content or frequently accessed resources, reducing the load on backend servers and improving overall performance for users.
+  **Centralized Logging and Monitoring**: By intercepting all traffic, reverse proxies can provide a centralized point for logging and monitoring incoming requests, responses, and 
+    potential security threats.
+  **Security**: Using Nginx for whitelisting involves configuring Nginx to allow access only to specified IP addresses or ranges while denying access to others. 
+
  
