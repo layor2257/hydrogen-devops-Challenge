@@ -230,4 +230,12 @@ spec:
               memory: "3Gi"    # Specifies the maximum allowed memory
 
   ```
-    
+  
+  I would label my node pools:
+
+  ```
+  kubectl label nodes <node-name> node-pool=pool-1
+  kubectl label nodes <node-name> node-pool=pool-2
+  ```
+
+      
