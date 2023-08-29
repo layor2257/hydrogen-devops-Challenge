@@ -238,4 +238,19 @@ spec:
   kubectl label nodes <node-name> node-pool=pool-2
   ```
 
-      
+  I would update my deployment manifest with node affinity:
+
+  ```
+  spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node-pool
+                    operator: In
+                    values:
+                      - pool-2
+   ```
