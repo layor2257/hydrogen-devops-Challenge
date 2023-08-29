@@ -170,6 +170,6 @@ server {
 }
 
 
-
+#### The above proxy configuration was done using nginx in the `/etc/nginx/sites-available` directory with a symlink set up with the sites-enabled.
 
  
