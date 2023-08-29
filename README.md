@@ -228,6 +228,6 @@ spec:
             limits:
               memory: "3Gi"    # Specifies the maximum allowed memory
 
-    ```
+    
 
     
