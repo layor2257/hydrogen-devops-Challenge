@@ -312,7 +312,7 @@ spec:
 
     Created an `EKS Cluster` using this command:
 
-    `eksctl create cluster --name primuslearning --region us-east-2 --nodegroup-name linux-nodes --node-type t2.micro --nodes 2`
+    `eksctl create cluster --name hydrogencluster --region us-east-2 --nodegroup-name linux-nodes --node-type t2.micro --nodes 2`
 
     I created two GitHub secrets for the repo named `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` with their respective values.
 
