@@ -415,3 +415,20 @@ spec:
             - containerPort: 8080
          
    ```
+
+I created a service file:
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: hydrogendeploy
+spec:
+  selector:
+    app: hydrogendeploy
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
+```
