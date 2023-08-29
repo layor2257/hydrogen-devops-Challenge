@@ -184,4 +184,16 @@ server {
   
   **Security**: Using Nginx for whitelisting involves configuring Nginx to allow access only to specified IP addresses or ranges while denying access to others. 
 
- 
+
+
+ 2. **The second task**
+
+    This question asks me to explain how you would deploy an application that requires 2.5 GB of memory to a Kubernetes cluster that has two node pools, each with specific 
+    computing resources. Additionally, the First Node pool has 1GB of Memory and 1 CPU and the Second Node pool has 3GB of Memory and 2 CPUs.
+
+    Based on the information provided in the question, the first node pool with 1GB of memory is not suitable for deploying an application that requires 2.5GB of memory. Therefore, 
+    you should target the second node pool with 3GB of memory and 2 CPUs for this deployment.
+
+    In order to achieve the usage of the second node pool, I would use `Node affinity rules`. Node affinity is a concept in Kubernetes that allows you to influence the scheduling of 
+    pods onto nodes based on custom rules or conditions. Node affinity rules help you control the placement of pods and ensure that they are scheduled on nodes that meet certain 
+    criteria or conditions.
