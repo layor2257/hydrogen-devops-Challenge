@@ -25,3 +25,15 @@ app.listen(port, () => {
   console.log(Example app listening on port ${port})
 })
 ```
+
+
+## Solutions:
+
+1. Firstly, I would like to define what a reverse proxy is.
+
+A reverse proxy is a server that sits between a client device and a backend server and directs client requests to the appropriate server.
+
+ Nginx is a reverse proxy server that handles requests on behalf of the backend server instead of clients connecting directly to the backend server and then forwards the requests to the appropriate backend server and returns the response back to the clients.
+
+These are the steps to set up an Nginx reverse proxy server:
+
