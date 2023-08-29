@@ -37,3 +37,11 @@ A reverse proxy is a server that sits between a client device and a backend serv
 
 These are the steps to set up an Nginx reverse proxy server:
 
+Using the `apt` packaging system, we need to first update or local package index
+
+```
+sudo apt update
+sudo apt install nginx
+```
+
+
