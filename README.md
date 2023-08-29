@@ -60,8 +60,11 @@ Available applications:
   OpenSSH
 ```
  use this command `sudo ufw allow 'Nginx Full'` 
+ 
  **Nginx Full**: This profile opens both port 80 (normal, unencrypted web traffic) and port 443 (TLS/SSL encrypted traffic)
+ 
  Use this command to confirm the ufw status `sudo ufw status`
+ 
  And finally use this command to start your nginx server `systemctl status nginx`
 
 
