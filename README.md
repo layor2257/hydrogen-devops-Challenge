@@ -203,9 +203,10 @@ server {
     are scheduled on nodes that meet certain 
     criteria or conditions.
 
-    The Kubernetes Deployment Manifest:
-```
-    apiVersion: apps/v1
+    The Kubernetes Deployment Manifest
+
+  ```
+  apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: your-app
@@ -228,6 +229,5 @@ spec:
             limits:
               memory: "3Gi"    # Specifies the maximum allowed memory
 
-    
-
+  ```
     
