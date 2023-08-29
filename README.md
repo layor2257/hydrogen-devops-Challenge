@@ -386,6 +386,32 @@ jobs:
 
 ```
 
+The GitHub action automate the deployment process of the node.js application to an Amazon EKS cluster. It involves building a Docker image, pushing it to Amazon ECR, updating the kubectl configuration, and applying the Kubernetes manifests to the EKS cluster. 
 
+   I created the deployment file:
 
-
+   ```
+    apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hydrogendeploy
+  labels:
+    app: hydrogendeploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hydrogendeploy
+  template:
+    metadata:
+      labels:
+        app: hydrogendeploy
+    spec:
+      containers:
+        - name: hdrogencontainer
+          image: 640315517146.dkr.ecr.us-east-2.amazonaws.com/hydrogencontainer:1.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+         
+   ```
