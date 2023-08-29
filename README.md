@@ -254,3 +254,8 @@ spec:
                     values:
                       - pool-2
    ```
+
+ Once you have your Deployment manifest ready, you can push it to your GitHub repository. Make sure to replace placeholders like your-app, 
+ your-app-image, and update the labels as needed.
+
+ Using `kubectl` configured to connect to your Kubernetes cluster: `kubectl apply -f your-app-deployment.yaml`
