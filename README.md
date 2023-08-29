@@ -308,4 +308,31 @@ spec:
      `sudo apt-get autoremove`
      
 
+ 4. I would deploy the node js application to `EKS` using `Github action`.
+
+    Created an `EKS Cluster` using this command:
+
+    `eksctl create cluster --name primuslearning --region us-east-2 --nodegroup-name linux-nodes --node-type t2.micro --nodes 2`
+
+    I created two GitHub secrets for the repo named `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` with their respective values.
+
+    I created a `Dockerfile`:
+
+    ```
+    FROM node:14-alpine
+
+    # Create app directory
+    WORKDIR /usr/src/app
+
+    COPY . .
+
+    RUN npm install
+
+    EXPOSE 8080
+
+    CMD [ "node", "server.js" ]
+    ```
+
+
+    
 
