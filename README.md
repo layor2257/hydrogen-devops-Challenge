@@ -204,8 +204,7 @@ server {
     criteria or conditions.
 
     The Kubernetes Deployment Manifest:
-    
-    ```
+```
     apiVersion: apps/v1
 kind: Deployment
 metadata:
