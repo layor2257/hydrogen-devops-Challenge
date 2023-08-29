@@ -188,22 +188,20 @@ server {
 
  2. ### The second task
 
-    This question asks me to explain how you would deploy an application that requires 2.5 GB of memory to a Kubernetes cluster that has 
+    This question asks me to explain how I would deploy an application that requires 2.5 GB of memory to a Kubernetes cluster that has 
     two node pools, each with specific 
     computing resources. Additionally, the First Node pool has 1GB of Memory and 1 CPU and the Second Node pool has 3GB of Memory and 2 
     CPUs.
 
     Based on the information provided in the question, the first node pool with 1GB of memory is not suitable for deploying an application 
     that requires 2.5GB of memory. Therefore, 
-    you should target the second node pool with 3GB of memory and 2 CPUs for this deployment.
+    I would target the second node pool with 3GB of memory and 2 CPUs for this deployment.
 
     In order to achieve the usage of the second node pool, I would use `Node affinity rules`. Node affinity is a concept in Kubernetes 
-    that allows you to influence the scheduling of 
-    pods onto nodes based on custom rules or conditions. Node affinity rules help you control the placement of pods and ensure that they 
-    are scheduled on nodes that meet certain 
-    criteria or conditions.
+    that allows you to influence the scheduling of pods onto nodes based on custom rules or conditions. Node affinity rules help you 
+    Control the placement of pods and ensure that they are scheduled on nodes that meet certain criteria or conditions.
 
-    The Kubernetes Deployment Manifest
+    The Kubernetes Deployment Manifest:
 
   ```
   apiVersion: apps/v1
@@ -255,10 +253,10 @@ spec:
                       - pool-2
    ```
 
- Once you have your Deployment manifest ready, you can push it to your GitHub repository. Make sure to replace placeholders like your-app, 
+ Once I have my Deployment manifest ready, I will push it to your GitHub repository. I also sure to replace placeholders like your-app, 
  your-app-image, and update the labels as needed.
 
- A service manifest to allow the app to be acccessible outside the k8s cluster:
+ A service manifest to allow the app to be accessible outside the k8s cluster:
 
 ```
 apiVersion: v1
@@ -275,4 +273,4 @@ spec:
   type: ClusterIP
 ```
 
- Using `kubectl` configured to connect to your Kubernetes cluster: `kubectl apply -f your-app-deployment.yaml`
+ Using `kubectl` configured to connect to my Kubernetes cluster to deploy the app: `kubectl apply -f your-app-deployment.yaml`
