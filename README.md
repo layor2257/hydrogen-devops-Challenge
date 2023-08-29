@@ -170,6 +170,6 @@ server {
 }
 ```
 
-#### The above proxy configuration was done using nginx in the `/etc/nginx/sites-available` directory with a symlink set up with the sites-enabled. The base URL for the server is glorypay.com and it contains two backend servers with endpoints called gloryback.glorypay.com and gloryfront.glorypay.com both opened on port `8300` and `8006` respectively. The client-side HTTPS request is managed using `Certbot`
+#### The above proxy configuration was done using nginx in the `/etc/nginx/sites-available` directory with a symlink set up with the `sites-enabled`. The base URL for the server is `glorypay.com` and it contains two backend servers with endpoints called `gloryback.glorypay.com` and `gloryfront.glorypay.com` both opened on port `8300` and `8006` respectively. The client-side HTTPS request is managed using `Certbot`
 
  
