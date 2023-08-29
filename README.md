@@ -38,11 +38,30 @@ app.listen(port, () => {
 
    These are the steps to set up an Nginx reverse proxy server:
 
-   Using the `apt` packaging system, we need to first update or local package index
+   **Using the `apt` packaging system, we need to first update or local package index**
 
   ```
   sudo apt update
   sudo apt install nginx
   ```
+
+ **Adjusting the Firewall**: Before testing Nginx, the firewall software needs to be configured to allow access to the service. Nginx registers itself as a service with `ufw` upon 
+ installation, making it straightforward to allow Nginx access.
+
+ List the application configurations that `ufw` knows how to work with by typing
+ `sudo ufw app list`
+ A listing of the application profiles:
+ ```
+Output
+Available applications:
+  Nginx Full
+  Nginx HTTP
+  Nginx HTTPS
+  OpenSSH
+```
+ use this command `sudo ufw allow 'Nginx Full'` 
+ **Nginx Full**: This profile opens both port 80 (normal, unencrypted web traffic) and port 443 (TLS/SSL encrypted traffic)
+ Use this command to confirm the ufw status `sudo ufw status`
+ And finally use this command to start your nginx server `systemctl status nginx`
 
 
