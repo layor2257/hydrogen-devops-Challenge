@@ -6,7 +6,7 @@
 
 2. There are two node pools in a Kubernetes cluster, which pool contains a single node. The computing resources for each node pool are 1GB Memory and 1 CPU, 3GB Memory, and 2 CPU. How will you deploy an application that requires 2.5 GB of Memory? Kubernetes manifest codes can be pushed to Github, documentation is appreciated
 
-3. You have ssh access to an Ubuntu or Debian Linux server, The disk is full and you need to clean it up, what would you do and which specific commands should you run?
+3. You have SSH access to an Ubuntu or Debian Linux server, The disk is full and you need to clean it up, what would you do and which specific commands should you run?
 
 4. The following NodeJs app has been developed, and the team is requesting a complete deployment approach. You have a pair of ACCESS_KEY and SECRET_KEY of an AWS user.
 
@@ -38,7 +38,7 @@ app.listen(port, () => {
 
    These are the steps to set up an Nginx reverse proxy server:
 
-   **Using the `apt` packaging system, we need to first update or local package index**
+   **Using the `apt` packaging system, we need to first update our local package index**
 
   ```
   sudo apt update
@@ -170,6 +170,6 @@ server {
 }
 ```
 
-#### The above proxy configuration was done using nginx in the `/etc/nginx/sites-available` directory with a symlink set up with the sites-enabled.
+#### The above proxy configuration was done using nginx in the `/etc/nginx/sites-available` directory with a symlink set up with the sites-enabled. The base URL for the server is glorypay.com and it contains two backend servers with endpoints called gloryback.glorypay.com and gloryfront.glorypay.com both opened on port `8300` and `8006` respectively. The client-side HTTPS request is managed using `Certbot`
 
  
