@@ -10,7 +10,7 @@
 
 4. The following NodeJs app has been developed, and the team is requesting a complete deployment approach. You have a pair of ACCESS_KEY and SECRET_KEY of an AWS user.
 
-NB: You can use Terraform, Ansible, Bash, etc. Code can be pushed in Github, documentation is appreciated.
+NB: You can use Terraform, Ansible, Bash, etc. Code can be pushed in Github, documentation is appreciated...
 
 ```
 const express = require('express')
